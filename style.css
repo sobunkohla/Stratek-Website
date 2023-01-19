@@ -85,14 +85,22 @@ p {
 .text__underline::after {
     content:"";
     position:absolute;
-    left:0;
-    bottom:0;
-    height:2px;
+    right:0;
+    bottom:-3px;
+    height:3px;
+    font-weight: bold;
+    transition: all 450ms;
+    width:0%;
+}
+.text__underline--white:after {
     background-color: white;
-    transition: all 300ms ease;
+}
+.text__underline--black:after {
+    background-color: black;
 }
 .text__underline:hover:after {
-    right:0;
+    left:0;
+    width:100%;
 }
 
 
@@ -184,7 +192,7 @@ Nav
 }
 
 .nav__link:hover {
-    text-decoration: underline ;
+    
     filter: brightness(0%);
 }
 
@@ -420,7 +428,7 @@ HEADER
     align-items: center;
 }
 .header__social--link {
-    padding-left: 32px;
+    margin-left: 32px;
     color: white;
 }
 
@@ -1219,4 +1227,12 @@ small phones, Tablets, smartphones, large phones
         display:flex;
         justify-content:center;
     }
+    .nav__backdrop {
+      left:0;
+    }
+    .backdrop__top{
+
+        
+    }
+    
 }
